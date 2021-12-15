@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: none;
+}
+/* ############################# HTML element styling */
+html{
+    /*font-size: 10px; *by default 16px or 100%  for 10px = (100/16)*10==62.5    */
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul li{
+    list-style: none; /*we can use disc point etc */
+}
+a{
+    font-size: 1.6rem; /*1.6 rem = 16px*/
+    text-decoration: none; /*by default none*/
+}
+p, li{
+    font-size: 1.6rem; /*em check from here but rem check for root elements*/
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em; /*gap between letter */
+}
+h1,h2,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;/*by default it is 700 */
+}
+/* ############################## Utility class ####################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; /* for putting it into  centre */
+}
+.lg-heading{
+    font-size: 3.5rem;
+}
+.md-heading{
+    font-size: 2.2rem;
+}
+.text-red{
+    color: #e63946;
+}
+.text-light{
+    color: #f4f4f4;
+}
+.text-black{
+    color: #333;
+}
+.text-grey{
+    color: #555555;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em; /*em is good in giving padding and margin but rem is good in giving font size*/
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+.btn-primary{
+    background-color: #fff;
+    border-radius: 10em;
+}
+.btn-primary:hover{
+    background-color: #ddd;
+}
+.btn-secondary{
+    border: 2px solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+    background: #fff;
+}
+.btn-secondary:hover{
+    background-color: #fcf3f2;
+}
+.bg-dark{
+    background-color: #263238;
+}
+/* ################################## Header styling ####################### */
+.header {
+    height: 95vh;
+     /*.. to come back from any folder and . for going to other folder in same directory*/
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../Img/header-image.jpg');  /*to do background drak use linear gradient*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar{
+    padding: 1rem;
+}
+.navbar a:link, 
+.navbar a:visited{
+    color: #f4f4f4;
+}
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+.navbar a:hover{
+    border-bottom: 1px solid #fff;
+}
+.navbar .logo{
+    float: left;
+}
+.navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+}
+.navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* #################################### Header content styling  ################################# */
+.header-content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+}
+.header-content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header-content p{
+    text-transform: uppercase;
+}
+/* ####################################### Showcase section styling ############################################ */
+.showcase{
+    background: #ddd;
+    padding: 10rem 0;
+}
+.row{
+    height: 350px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px #aaa;      /*x-axis y-axis blur sprad color*/
+}
+.row1{
+    margin-bottom: 10rem;
+}
+.row1 .img-box, .row2 .text-box{
+    float: left;
+    width: 50%;
+}
+.row1 .text-box, .row2 .img-box{
+    float: right;
+    width: 50%;
+}
+.row .img-box{
+    height: 100%;
+    width: 50%;
+}
+.row .text-box{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding-top: 5rem;
+} 
+
+.row .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*To maintain acpect ratio*/
+}
+.showcase .row::after{
+    content: '';
+    display: block;
+
+    clear: both;
+}
+/* ############################### FEATURE SECTION STYLING ################### */
+.feature{
+    padding: 10rem 0;
+}
+.box-wrapper{
+    box-shadow: 0px 0px 20px 0px black;
+}
+.box{
+    height: 200px;
+    width: 33.333333%;
+    float: left;
+    padding-top: 3rem;
+    text-align: center;
+}
+.box1, .box3{
+    background-color: #263238;
+    color: #fff;
+}
+.box2{
+    background: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+}
+.box-wrapper::after{
+    content: '' ;
+    display: block;
+    clear: both;
+}
+/* ########################################### Footer styling ##################################### */
+.footer{
+    background: #263238;
+    color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links i{
+    margin: 2rem;
+}
+/* ######################################### About page  styling #####################################  */
+.about{
+    padding: 5rem 0;
+}
+.about-heading{
+    border-bottom: 6px solid #e63946;
+}
+/* We can also add heading by using pseudo element */
+/* .about-heading{
+    content: '';
+    display: block;
+    border-bottom: 3px solid #e63946;
+    width: 100%;     
+}*/  /*We can also control width of the line */
+
+/* ################################ About Wrapper ####################################  */
+.about-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+.about-wrapper .left{
+    float: left;
+    width: 50%;
+}
+.about-wrapper .right{
+    float: right;
+    width: 50%;
+}
+.about-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.about-wrapper li::before{
+    content: '\2713';  /* \2713 is code for tick */
+    color: #e63946;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+/* ############################# Count Styling ##########################  */
+.counts{
+    margin-top: 3rem;
+}
+.count-item{
+    width: 24.6%;
+    text-align: center;
+    float: left;
+}
+.counts::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.count-item span{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e63946;
+}
+.count-item p{
+    font-weight: 700;
+    color:grey;
+    font-size: 1.8rem;
+}
+
+/* #############################  Banner Styling      ########################### */
+.cta-banner{
+    background: linear-gradient(25deg,#d64c7f,#ee4758);
+    color : #f4f4f4;
+    padding: 1rem;
+    box-sizing: 5px 5px 10px #00000057;
+    margin-top: 3rem;
+}
+.cta-banner-left{
+    width : 60% ;
+    float: left ;
+}
+.cta-banner-right{
+    width: 40%;
+    float: right ;
+    text-align: right;
+}
+.cta-line{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+.btn-cta{
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 4px solid white;
+    padding: 0.3em 2.5em;
+    letter-spacing: 0.5rem;
+    color: #f4f4f4;
+}
+.cta-banner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ##################### Conatct Page  Styling ######################### */
+.contact-form{
+    padding: 5rem 0;
+    background: #f7f7f7;
+}
+.form-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.form-wrapper .company-address{
+    height: 760px;
+    background: #fff;
+    width: 49%;
+    float: left;
+}
+.form-wrapper .company-address i {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.form-wrapper .company-address h2 {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.form-wrapper .address-group{
+    margin-bottom: 3 rem;
+}
+
+.form-wrapper .company-address img{
+    width: 90%;
+}
+
+/*######################### Form styling #############################*/
+.form-wrapper .form{
+    height: 760px;
+    font-size: 1.6rem;
+    background: #fff;
+    width: 49%;
+    float: right;
+    padding: 1rem;
+}
+.form h1::after{
+    content: '';
+    display: block;
+    border: 3px solid red ;
+    width: 100%;
+}
+.form-wrapper label{
+    display: block;
+}
+.form-wrapper .form input{
+    padding: 0.5rem;
+    width: 100%;
+}
+.form-wrapper .form .form-group{
+    margin-bottom: 1.2rem;
+}
+.form-wrapper .form label::after{
+    content: '* ';
+    color: #e63946;
+}
+.form-wrapper .form textarea{
+    width: 100%;
+    height: 300px;
+    padding: 1rem;
+}
+
+.form-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: #e63946;
+    color : white ;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*########################################### Media Queries #############################*/
+
+@media(max-width: 500px){
+    html{
+        /* font size : 8px */
+        font-size: 50% ;
+    }
+    .navbar .nav-items,.navbar .logo{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .header-content .main-heading{
+        display: none;
+    }
+    .row{
+        height:auto ;
+        width: 100%;
+    }
+    .row .img-box, .row .text-box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(102,102,102,0.521);
+    }
+    .feature .box2,.feature .box3{
+        margin-top: 7rem;
+    }
+    .box-wrapper{
+        box-shadow: none;
+    }
+    .cta-banner-left,.cta-banner-right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .form-wrapper .company-address{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .form-wrapper .form{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(min-width : 501px) and (max-width : 768px){
+    html{
+        /* font size : 8px */
+        font-size: 50% ;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .navbar .nav-items,.navbar .logo{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .row{
+        height:auto ;
+        width: 100%;
+    }
+    .row .img-box, .row .text-box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(102,102,102,0.521);
+    }
+    .feature .box2,.feature .box3{
+        margin-top: 7rem;
+    }
+    .box-wrapper{
+        box-shadow: none;
+    }
+    .cta-banner-left,.cta-banner-right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .form-wrapper .company-address{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .form-wrapper .form{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(orientation : landscape) and (max-height: 500px){
+    .header{
+        height: 90vmax;
+    }
+}
