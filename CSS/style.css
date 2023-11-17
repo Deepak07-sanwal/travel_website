@@ -105,6 +105,7 @@ h1,h2,h3{
 }
 .navbar .logo{
     float: left;
+    cursor: pointer;
 }
 .navbar .nav-items{
     float: right;
@@ -515,3 +516,15 @@ h1,h2,h3{
         height: 90vmax;
     }
 }
+
+@media(max-width: 225px)
+{
+    .lg-heading{
+        font-size:2rem;
+    }
+
+    .btn-primary{
+        display: none;
+    }
+}
+
